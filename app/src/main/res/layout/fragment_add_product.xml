@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".addProductFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        app:titleTextColor="#ffffff"
+        app:title="Add Product"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="13dp"
+        android:text="Please fill product details!"
+        android:textColor="@color/yellow"
+        android:textSize="18.20sp"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="6.5dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="26dp"
+                android:layout_marginTop="1.30dp"
+                app:boxCornerRadiusBottomEnd="16.90dp"
+                app:boxCornerRadiusTopEnd="16.90dp"
+                app:boxCornerRadiusTopStart="16.90dp"
+                app:boxCornerRadiusBottomStart="16.90dp"
+                app:cursorColor="@color/yellow"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/yellow"
+                ><com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/producttitle"
+                android:drawablePadding="9.1dp"
+                android:hint="Product Title"
+                android:inputType="text"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="26dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="0.5"
+                       android:layout_marginEnd="2.6dp"
+                       app:boxCornerRadiusBottomEnd="16.90dp"
+                       app:boxCornerRadiusTopEnd="16.90dp"
+                       app:boxCornerRadiusTopStart="16.90dp"
+                       app:boxCornerRadiusBottomStart="16.90dp"
+                       app:cursorColor="@color/yellow"
+                       app:endIconMode="clear_text"
+                       app:hintTextColor="@color/yellow">
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:drawablePadding="6dp"
+                           android:id="@+id/productquantity"
+                           android:hint="Quantity(1kg,1ltr)"
+                           android:inputType="number"/>
+                   </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:boxCornerRadiusBottomEnd="16.90dp"
+                        app:boxCornerRadiusTopEnd="16.90dp"
+                        android:layout_weight="0.5"
+                        app:boxCornerRadiusTopStart="16.90dp"
+                        app:boxCornerRadiusBottomStart="16.90dp"
+                        app:cursorColor="@color/yellow"
+                        app:startIconTint="@color/black"
+                        app:hintTextColor="@color/yellow"
+                        ><AutoCompleteTextView
+                        android:id="@+id/productunit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Unit"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="26dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginEnd="2.6dp"
+                    app:boxCornerRadiusBottomEnd="16.90dp"
+                    app:boxCornerRadiusTopEnd="16.90dp"
+                    app:boxCornerRadiusTopStart="16.90dp"
+                    app:boxCornerRadiusBottomStart="16.90dp"
+                    app:cursorColor="@color/yellow"
+                    app:endIconMode="clear_text"
+                    app:hintTextColor="@color/yellow">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/productprice"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="6dp"
+                        android:hint="Price(in rupees)"
+                        android:inputType="number"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2.6dp"
+                    android:layout_marginEnd="2.6dp"
+                    android:layout_weight="0.5"
+                    app:boxCornerRadiusBottomEnd="16.90dp"
+                    app:boxCornerRadiusTopEnd="16.90dp"
+                    app:boxCornerRadiusTopStart="16.90dp"
+                    app:boxCornerRadiusBottomStart="16.90dp"
+                    app:cursorColor="@color/yellow"
+                    app:hintTextColor="@color/yellow">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/productstock"
+                        android:inputType="number"
+                        android:hint="no.of Stock"
+                        android:paddingStart="6dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="26dp"
+                app:boxCornerRadiusBottomEnd="16.90dp"
+                app:boxCornerRadiusTopEnd="16.90dp"
+                app:boxCornerRadiusTopStart="16.90dp"
+                app:boxCornerRadiusBottomStart="16.90dp"
+                app:cursorColor="@color/yellow"
+                app:startIconDrawable="@drawable/baseline_category_24"
+                app:startIconTint="@color/black"
+                app:hintTextColor="@color/yellow"
+                ><AutoCompleteTextView
+                android:id="@+id/productcategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="       Product Category"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="26dp"
+                app:boxCornerRadiusBottomEnd="16.90dp"
+                app:boxCornerRadiusTopEnd="16.90dp"
+                app:boxCornerRadiusTopStart="16.90dp"
+                app:boxCornerRadiusBottomStart="16.90dp"
+                app:cursorColor="@color/yellow"
+                app:startIconDrawable="@drawable/baseline_category_24"
+                app:startIconTint="@color/black"
+                app:hintTextColor="@color/yellow"
+                ><AutoCompleteTextView
+                android:id="@+id/productype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="       Product Type"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvpic"
+                    android:layout_gravity="center"
+                    android:layout_margin="3.9dp"
+                    android:layout_marginTop="13dp"
+                    android:text="Please select some images"
+                    android:textColor="@color/yellow"
+                    android:textSize="18.2sp"
+                    android:textStyle="bold"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:tint="@color/black"
+                    android:id="@+id/productimagebtn"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/baseline_add_photo_alternate_24"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:id="@+id/rvproductimg"
+                android:layout_marginHorizontal="16.9dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_view"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="58.5dp"
+                android:layout_gravity="center"
+                android:layout_margin="13dp"
+                android:layout_marginHorizontal="26dp"
+                android:layout_marginTop="6.5dp"
+                android:backgroundTint="@color/yellow"
+                android:text="Add Product"
+                android:id="@+id/productaddbtn"
+                app:cornerRadius="10.4dp"
+                android:textColor="#ffffff"
+                android:textSize="19sp"/>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
